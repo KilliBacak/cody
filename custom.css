@@ -48,3 +48,44 @@ color: #f1f1f1;
 .wspavatar { width:36px; height:36px; border-radius:50%; display:block; }
 .wspusername_wrap { display:table-cell; vertical-align:middle; padding:0 5px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 .wspcancel { display:table-cell; vertical-align:middle; width:30px; font-size:20px; }
+.room-writings-layout {
+  position: absolute;
+  max-width: 100%;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding-bottom: -1px;
+  white-space: nowrap;
+}
+.room-writing {
+  display: inline-block;
+  background: rgb(0 0 0 / 50%);
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 2px 3px;
+  margin-left: 1px;
+}
+.writing-dot {
+  margin-left: 2px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  margin-right: 0;
+  animation: wave_yazanlar 0.8s linear infinite;
+}
+.writing-dot:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.writing-dot:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.room-writing .writing-dot {
+  background: #fff;
+}
+@keyframes wave_yazanlar { 0%,100%,60% { transform:initial } 30% { transform:translateY(-5px) } }
