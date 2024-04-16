@@ -180,6 +180,7 @@ clearChat = data => {
 chatReload = function(){
 	var cPosted = Date.now();
 	logsControl();
+var uyeyaziyor = ($('#content').val().length > 0) ? 1 : 0;
 	$.ajax({
 		url: "system/action/chat_log.php",
 		type: "post",
@@ -196,6 +197,7 @@ chatReload = function(){
 			pcount: pCount,
 			room: user_room,
 			notify: globNotify,
+			yaziyor: uyeyaziyor,
 			curset: curSet,
 		},
 		success: function(response){
@@ -275,6 +277,12 @@ chatReload = function(){
 							openWarn();
 						}
 					}
+if ('room_writing' in response) {
+    $('.room-writings-layout').show().html(response.room_writing);
+} else {
+    $('.room-writings-layout').hide().html('');
+}
+
 					if('pico' in response){
 						$('#notify_private').show();
 					}
