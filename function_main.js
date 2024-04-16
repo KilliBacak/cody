@@ -180,7 +180,11 @@ clearChat = data => {
 chatReload = function(){
 	var cPosted = Date.now();
 	logsControl();
-var uyeyaziyor = ($('#content').val().length > 0) ? 1 : 0;
+		if ($('#content').val().length > 0) {
+    var uyeyaziyor = 1;
+  } else {
+    var uyeyaziyor = 0;
+  }
 	$.ajax({
 		url: "system/action/chat_log.php",
 		type: "post",
@@ -277,12 +281,12 @@ var uyeyaziyor = ($('#content').val().length > 0) ? 1 : 0;
 							openWarn();
 						}
 					}
-if ('room_writing' in response) {
-    $('.room-writings-layout').show().html(response.room_writing);
-} else {
-    $('.room-writings-layout').hide().html('');
-}
-
+					if ('room_writing' in response) {
+	          $('.room-writings-layout').show().html(response.room_writing);
+            
+            } else {
+             $('.room-writings-layout').hide().html('');
+            }
 					if('pico' in response){
 						$('#notify_private').show();
 					}
