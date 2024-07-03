@@ -1,0 +1,50 @@
+/* CSS to center content */
+div.centered-content {
+    text-align: center;
+}
+
+/* CSS to remove image borders */
+img {
+    border: 0;
+}
+
+/* CSS to center content */
+.centered-content {
+text-align: center;
+}
+/* Optional: Add some spacing between the images */
+.centered-content a {
+margin: 10px;
+}
+/* placeholder */
+::placeholder {
+color: #f1f1f1;
+}
+  .password-toggle-container {
+    position: relative;
+  }
+
+  .password-toggle-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #495f69;
+    font-size: 18px;
+  }
+  
+  /* Göz butonunun durumu için stiller */
+  .password-toggle-btn.active {
+    color: #06c;
+  }
+  .cname {  font-weight: bold;}
+.whisper_log { cursor: pointer; }
+.wspwraper { position:absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; bottom:5px; display:block; width:190px; border-radius:100px; display:none; }
+.wspcontrol { display:table; width:100%; height:46px; padding:5px; table-layout:fixed; }
+.wspavatarwrap { display:table-cell; vertical-align:middle; width:36px; height:36px; }
+.wspavatar { width:36px; height:36px; border-radius:50%; display:block; }
+.wspusername_wrap { display:table-cell; vertical-align:middle; padding:0 5px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.wspcancel { display:table-cell; vertical-align:middle; width:30px; font-size:20px; }
